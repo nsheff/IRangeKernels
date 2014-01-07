@@ -1,0 +1,13 @@
+Package: IRangesMultiplication
+Version: 1.16.6
+Title: Extends IRanges to allow fast Views Multiplication
+Description: The package provides an additional function, viewMuls, to multiply Views by a vector.
+Author: Nathan Sheffield
+Maintainer: Nathan Sheffield <nathan.sheffield@duke.edu>
+Depends: IRanges, R (>= 2.8.0)
+Imports: IRanges
+LinkingTo: IRanges
+Suggests: dipPeak
+License: Artistic-2.0
+URL: http://www.nathansheffield.com
+LazyLoad: yes

@@ -1,0 +1,3 @@
+useDynLib(IRangesMultiplication)
+import(IRanges)
+export(viewMuls)
