@@ -18,7 +18,7 @@ SEXP RleViews_viewMuls(SEXP x, SEXP na_rm, SEXP y)
 	    lower_run, upper_run, lower_bound, upper_bound;
 	int max_index, *lengths_elt;
 	SEXP ans, subject, values, lengths, ranges, names;
-	cachedIRanges cached_ranges;
+	IRanges_holder cached_ranges;
 	double *y_c = REAL(y);
 	int kernelIndex, count, multiCounter;
 	int * intValues;
