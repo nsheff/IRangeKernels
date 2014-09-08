@@ -1,4 +1,4 @@
-#include "IRangesMultiplication.h"
+#include "IRangeKernels.h"
 #include <R_ext/Arith.h>
 #include <R_ext/Utils.h>
 #include <limits.h>

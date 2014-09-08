@@ -1,13 +1,19 @@
-Package: IRangesMultiplication
+Package: IRangeKernels
 Version: 1.16.6
-Title: Extends IRanges to allow fast Views Multiplication
-Description: The package provides an additional function, viewMuls, to multiply Views by a vector.
+Title: IRangeKernels - Kernel density estimation using IRanges
+Description: The package extends IRanges to allow fast sliding window density
+    estimation by implementing a Views kernel multiplication function,
+    viewMuls, to multiply Views by a vector.
 Author: Nathan Sheffield
-Maintainer: Nathan Sheffield <nathan.sheffield@duke.edu>
-Depends: IRanges, R (>= 2.8.0)
-Imports: IRanges
+Maintainer: Nathan Sheffield
+Depends:
+    IRanges,
+    R (>= 2.8.0)
+Imports:
+    IRanges
 LinkingTo: IRanges
-Suggests: dipPeak
+Suggests:
+    dipPeak
 License: Artistic-2.0
 URL: http://www.nathansheffield.com
 LazyLoad: yes

@@ -1,4 +1,4 @@
-#include "IRangesMultiplication.h"
+#include "IRangeKernels.h"
 #include "IRanges_interface.h"
 #include "IRanges_defines.h"
 #include <R_ext/Rdynload.h>
@@ -29,7 +29,7 @@ static const R_CallMethodDef callMethods[] = {
 // get pointers to functions with name p_functioName
 //these are roginally efined in IRanges_interface.h
 
-void R_init_IRangesMultiplication(DllInfo *info)
+void R_init_IRangesKernels(DllInfo *info)
 {
 
 /* _get_IRanges_length = R_GetCCallable("IRanges", "_get_IRanges_length");*/
