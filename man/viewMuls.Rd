@@ -6,7 +6,7 @@
 viewMuls(x, na.rm = FALSE, y)
 }
 \arguments{
-\item{y}{Views object.}
+\item{x}{Views object.}
 
 \item{na.rm}{remove NAs?}
 

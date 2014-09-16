@@ -26,18 +26,17 @@ static const R_CallMethodDef callMethods[] = {
 //Init function for this package,
 // get (retrieve) callable functions from the IRanges package
 // using R_GetCCallable (http://cran.r-project.org/doc/manuals/r-release/R-exts.html#Registering-native-routines)
-// get pointers to functions with name p_functioName
-//these are roginally efined in IRanges_interface.h
+// get pointers to functions with name p_functionName
+//these are originally defined in IRanges_interface.h
 
-void R_init_IRangesKernels(DllInfo *info)
+void R_init_IRangeKernels(DllInfo *info)
 {
 
 /* _get_IRanges_length = R_GetCCallable("IRanges", "_get_IRanges_length");*/
- 	p_cache_IRanges = ( IRanges_holder(*)(SEXP) ) R_GetCCallable("IRanges", "_hold_IRanges");
-	p_get_cachedIRanges_length = (int(*)(const IRanges_holder *)) R_GetCCallable("IRanges", "_get_length_from_IRanges_holder");
-
-	p_get_cachedIRanges_elt_start = (int(*)(const IRanges_holder *, int)) R_GetCCallable("IRanges", "_get_start_elt_from_IRanges_holder");
-	p_get_cachedIRanges_elt_width = (int(*)(const IRanges_holder *, int)) R_GetCCallable("IRanges", "_get_width_elt_from_IRanges_holder");
+ 	p_hold_IRanges = ( IRanges_holder(*)(SEXP) ) R_GetCCallable("IRanges", "_hold_IRanges");
+	p_get_length_from_IRanges_holder = (int(*)(const IRanges_holder *)) R_GetCCallable("IRanges", "_get_length_from_IRanges_holder");
+	p_get_start_elt_from_IRanges_holder = (int(*)(const IRanges_holder *, int)) R_GetCCallable("IRanges", "_get_start_elt_from_IRanges_holder");
+	p_get_width_elt_from_IRanges_holder = (int(*)(const IRanges_holder *, int)) R_GetCCallable("IRanges", "_get_width_elt_from_IRanges_holder");
 	p_get_IRanges_names = (SEXP(*)(SEXP)) R_GetCCallable("IRanges", "_get_IRanges_names");
 
 }

@@ -1,16 +1,5 @@
-#include "IRangeKernels.h"
-#include <R_ext/Arith.h>
-#include <R_ext/Utils.h>
-#include <limits.h>
 
-#define R_INT_MIN	(1+INT_MIN)
-
-/*
- * --- .Call ENTRY POINT ---
- */
-//Nathan's new function
-//	printf("yvector:%f\n", (double) *y_c);
-SEXP RleViews_viewMuls(SEXP x, SEXP na_rm, SEXP y)
+SEXP RleViews_viewMuls2(SEXP x, SEXP na_rm, SEXP y)
 {
 	char type = '?';
 	int i, start, width, ans_length, index,
@@ -28,7 +17,7 @@ SEXP RleViews_viewMuls(SEXP x, SEXP na_rm, SEXP y)
 	ranges = GET_SLOT(x, install("ranges"));
 	ranges_holder = p_hold_IRanges(ranges);
 	ans_length = p_get_length_from_IRanges_holder(&ranges_holder);
-
+	printf("size:%i\n", (int) *y_c);
 	ans = R_NilValue;
 	switch (TYPEOF(values)) {
     case LGLSXP:
@@ -123,6 +112,7 @@ SEXP RleViews_viewMuls(SEXP x, SEXP na_rm, SEXP y)
 						         (lower_bound > lower_run ? lower_bound : lower_run));
 					//	printf("index: %d, values: %d, y: %f, count: %d, lower_run: %d, upper_run:%d, lower_bound: %d, upper_bound:%d, kernelIndex:%d\n", index, INTEGER(values)[index], REAL(y)[kernelIndex], count, lower_run, upper_run, lower_bound, upper_bound, kernelIndex);
 	multiCounter = 0;
+printf("size:%i\n", (int) kernelIndex);
 						if (intValues[index] > 0) {
 							while( multiCounter < count ) {
 								REAL(ans)[i] += intValues[index] * y_c[kernelIndex];
@@ -183,4 +173,5 @@ kernelIndex += count;
 	UNPROTECT(2);
 	return ans;
 }
+
 

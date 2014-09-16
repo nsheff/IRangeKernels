@@ -9,6 +9,7 @@
 #' \url{github.com/sheffien}
 #' @import IRanges
 #' @docType package
+#' @useDynLib IRangeKernels
 #' @name IRangeKernels
 #' @author Nathan Sheffield
 NULL
@@ -22,7 +23,7 @@ NULL
 #' Analogous to the IRanges viewSums, but multiplies by a vector; so you can think
 #' of it as a weighted sum, or a kernel density estimate.
 #'
-#' @param y 		Views object.
+#' @param x 		Views object.
 #' @param na.rm	remove NAs?
 #' @param y 		kernel vector or weights to multiply by; should be a vector matching the length of x.
 #' @export

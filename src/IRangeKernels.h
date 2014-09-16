@@ -8,8 +8,6 @@
 	if (NAME ## _symbol == NULL) \
 		NAME ## _symbol = install(# NAME); \
 }
-
-
 SEXP RleViews_viewMuls(
 	SEXP x,
 	SEXP na_rm,
@@ -38,12 +36,11 @@ These are declarations for the callable functions retrieved from IRanges.
 //SEXP (*p_get_IRanges_names)(SEXP);
 
 //Updating for version 1.22
-IRanges_holder (*p_cache_IRanges)(SEXP x);
-int (*p_get_cachedIRanges_length)(const IRanges_holder *);
-int (*p_get_cachedIRanges_elt_width)(const IRanges_holder *, int);
-int (*p_get_cachedIRanges_elt_start)(const IRanges_holder *, int);
+IRanges_holder (*p_hold_IRanges)(SEXP x);
+int (*p_get_length_from_IRanges_holder)(const IRanges_holder *);
+int (*p_get_width_elt_from_IRanges_holder)(const IRanges_holder *, int);
+int (*p_get_start_elt_from_IRanges_holder)(const IRanges_holder *, int);
 SEXP (*p_get_IRanges_names)(SEXP);
-
 
 /*
 SEXP _get_IRanges_names(SEXP x);
@@ -56,3 +53,5 @@ int _get_cachedIRanges_elt_start(
 	const cachedIRanges *cached_x,
 	int i
 );*/
+
+
