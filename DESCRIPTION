@@ -11,8 +11,7 @@ Depends:
     R (>= 3.1.0)
 Imports:
     IRanges
-LinkingTo: 
-    IRanges
+LinkingTo: IRanges
 Suggests:
     dipPeak
 License: Artistic-2.0
