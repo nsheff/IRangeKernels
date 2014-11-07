@@ -1,0 +1,5 @@
+IRangeKernels is an R package that extends the IRanges Bioconductor package with a new function, viewMuls, which can provides element-wise multiplication of run-length-encoded Views objects with a vector provided by the user.
+
+Don't look too closely at the code, this is just a hack designed to illustrate that this is possible (and fast) but it's not well documented or ready for production use yet.
+
+I hope that eventually this will become integrated with the IRanges codebase but for now, this works.
