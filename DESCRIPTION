@@ -1,5 +1,5 @@
 Package: IRangeKernels
-Version: 1.16.6
+Version: 2.3.1
 Title: IRangeKernels - Kernel density estimation using IRanges
 Description: The package extends IRanges to allow fast sliding window density
     estimation by implementing a Views kernel multiplication function,
@@ -7,8 +7,7 @@ Description: The package extends IRanges to allow fast sliding window density
 Author: Nathan Sheffield
 Maintainer: Nathan Sheffield <sheffien@users.noreply.github.com>
 Depends:
-    IRanges,
-    R (>= 3.1.0)
+   IRanges
 Imports:
     IRanges
 LinkingTo: IRanges
